@@ -1242,3 +1242,141 @@ section {
 .form-status-msg.error {
   color: #ef4444;
 }
+
+/* --- 4. TECH STACK SECTION --- */
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.stack-card-wrapper {
+  position: relative;
+  border-radius: 12px;
+  padding: 1px;
+  background: transparent;
+  transition: var(--transition-smooth);
+}
+
+.stack-card-wrapper:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+}
+
+.stack-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  background: rgba(9, 9, 11, 0.5);
+}
+
+.stack-card-wrapper:hover .stack-card {
+  border-color: transparent;
+  background: rgba(14, 14, 17, 0.8);
+}
+
+.stack-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120px circle at var(--card-mouse-x, 0px) var(--card-mouse-y, 0px), rgba(99, 102, 241, 0.08), transparent 80%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.stack-card-wrapper:hover .stack-glow {
+  opacity: 1;
+}
+
+.stack-card-content {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  z-index: 5;
+}
+
+.stack-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.stack-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-indigo);
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+.stack-card-wrapper:hover .stack-icon-wrapper {
+  color: var(--accent-violet);
+  background: rgba(139, 92, 246, 0.08);
+  border-color: rgba(139, 92, 246, 0.25);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
+}
+
+.stack-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.25px;
+}
+
+.stack-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.stack-item {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  transition: var(--transition-smooth);
+}
+
+.stack-card-wrapper:hover .stack-item {
+  color: var(--text-primary);
+}
+
+.stack-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dl-dot {
+  background-color: var(--accent-violet);
+  box-shadow: 0 0 6px var(--accent-violet);
+}
+
+.mlops-dot {
+  background-color: var(--accent-amber);
+  box-shadow: 0 0 6px var(--accent-amber);
+}
+
+.db-dot {
+  background-color: var(--accent-emerald);
+  box-shadow: 0 0 6px var(--accent-emerald);
+}
+
+.cloud-dot {
+  background-color: #3b82f6;
+  box-shadow: 0 0 6px #3b82f6;
+}

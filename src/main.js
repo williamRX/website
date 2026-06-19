@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.style.setProperty('--mouse-y', `${y}%`);
   });
 
-  // 3. Card-specific hover glows (Project cards and Certification card)
-  const cards = document.querySelectorAll('.project-card, .cert-card');
+  // 3. Card-specific hover glows (Project cards, Certification card, Stack card)
+  const cards = document.querySelectorAll('.project-card, .cert-card, .stack-card');
   
   cards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
