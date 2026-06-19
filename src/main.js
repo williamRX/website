@@ -101,4 +101,52 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 7. AJAX Contact Form Submission
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+  
+  if (contactForm && formStatus) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Reset classes
+      formStatus.className = 'form-status-msg active';
+      formStatus.textContent = 'Sending message...';
+      
+      const formData = new FormData(contactForm);
+      
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(formData))
+      })
+      .then(async (response) => {
+        const json = await response.json();
+        if (response.status === 200) {
+          formStatus.className = 'form-status-msg active success';
+          formStatus.textContent = 'Message sent successfully! I will get back to you shortly.';
+          contactForm.reset();
+        } else {
+          console.error(json);
+          formStatus.className = 'form-status-msg active error';
+          formStatus.textContent = json.message || 'Something went wrong. Please try again.';
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        formStatus.className = 'form-status-msg active error';
+        formStatus.textContent = 'Network error. Please try again later.';
+      })
+      .finally(() => {
+        setTimeout(() => {
+          formStatus.className = 'form-status-msg';
+          formStatus.textContent = '';
+        }, 5000);
+      });
+    });
+  }
 });
