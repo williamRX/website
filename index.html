@@ -177,7 +177,7 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Card 1: WePlate -->
+        <!-- Card 1: Siquelator -->
         <div class="project-card-wrapper">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
@@ -186,14 +186,16 @@
                 <div class="project-icon-wrapper">
                   <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
                     stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M8 12h8"></path>
-                    <path d="M12 8v8"></path>
+                    <polyline points="4 17 10 11 4 5"></polyline>
+                    <line x1="12" y1="19" x2="20" y2="19"></line>
                   </svg>
                 </div>
-                <h3 class="project-title">WePlate</h3>
-                <a href="https://github.com/williamRX/WePlate" target="_blank" rel="noopener noreferrer"
-                  class="project-header-link" aria-label="WePlate GitHub Repository">
+                <div class="project-title-container" style="flex-grow: 1;">
+                  <span class="project-category">AGENTS IA AUTONOMES &amp; LLM</span>
+                  <h3 class="project-title">Siquelator</h3>
+                </div>
+                <a href="https://github.com/williamRX/Siquelator" target="_blank" rel="noopener noreferrer"
+                  class="project-header-link" aria-label="Siquelator GitHub Repository">
                   <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
                     stroke-linecap="round" stroke-linejoin="round">
                     <path
@@ -203,14 +205,14 @@
                 </a>
               </div>
               <p class="project-desc">
-                Developing a smart nutrition and meal recommendation platform featuring AI-driven container volume
-                estimation and calorie tracking.
+                Développement d'un agent IA autonome capable de traduire des requêtes formulées en langage naturel en requêtes SQL complexes. Le système intègre une boucle de rétroaction s'exécutant en arrière-plan : il teste directement les requêtes sur la base de données cible et déploie un pipeline d'auto-correction (Self-Correction Loop) en analysant les traces d'erreurs générées pour reformuler son code de manière itérative. Conçu pour fonctionner de manière 100% locale et souveraine.
               </p>
               <div class="project-tags">
-                <span class="tag">Computer Vision</span>
-                <span class="tag">AI</span>
-                <span class="tag">Python</span>
-                <span class="tag">Full-stack</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">LLM Locaux</span>
+                <span class="tag">Text-to-SQL</span>
+                <span class="tag">Self-Debugging</span>
+                <span class="tag">Gestion d'Agents</span>
               </div>
             </div>
           </div>
@@ -230,17 +232,20 @@
                     <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
                   </svg>
                 </div>
-                <div class="project-title-container">
-                  <h3 class="project-title">Astro-Retrieve</h3>
-                  <span class="private-badge">
-                    <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
-                      stroke-linecap="round" stroke-linejoin="round"
-                      style="display: inline-block; vertical-align: middle;">
-                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                    </svg>
-                    Private
-                  </span>
+                <div class="project-title-container" style="flex-grow: 1;">
+                  <span class="project-category">RAG AVANCÉ &amp; MLOPS</span>
+                  <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+                    <h3 class="project-title">Astro-Retrieve</h3>
+                    <span class="private-badge">
+                      <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        style="display: inline-block; vertical-align: middle;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                      Private
+                    </span>
+                  </div>
                 </div>
                 <a href="https://github.com/williamRX/Astro-Retrieve" target="_blank" rel="noopener noreferrer"
                   class="project-header-link" aria-label="Astro-Retrieve GitHub Repository">
@@ -253,21 +258,249 @@
                 </a>
               </div>
               <p class="project-desc">
-                Moteur RAG avancé et MLOps. Fine-tuning de modèles d'embedding (PyTorch), recherche hybride sur base
-                vectorielle locale et LLM via Ollama/FastAPI.
+                Moteur de recherche et de génération augmentée (RAG) de niveau industriel intégrant une approche MLOps complète. Le projet inclut le fine-tuning personnalisé de modèles d'embedding (sous PyTorch) et s'appuie sur une stratégie de recherche hybride (dense/vectorielle et lexicale) connectée à une base vectorielle locale, interfacée avec des LLM via Ollama et FastAPI.
               </p>
               <div class="project-tags">
                 <span class="tag">PyTorch</span>
-                <span class="tag">RAG</span>
-                <span class="tag">MLOps</span>
-                <span class="tag">FastAPI</span>
+                <span class="tag">Embedding Fine-Tuning</span>
+                <span class="tag">Base vectorielle locale</span>
                 <span class="tag">Ollama</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Pipelines MLOps</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Card 3: Voltaire -->
+        <!-- Card 3: WePlate -->
+        <div class="project-card-wrapper">
+          <div class="project-card glass-card">
+            <div class="project-glow"></div>
+            <div class="project-card-content">
+              <div class="project-header">
+                <div class="project-icon-wrapper">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 12h8"></path>
+                    <path d="M12 8v8"></path>
+                  </svg>
+                </div>
+                <div class="project-title-container" style="flex-grow: 1;">
+                  <span class="project-category">NUTRITION &amp; RECHERCHE OPÉRATIONNELLE</span>
+                  <h3 class="project-title">WePlate</h3>
+                </div>
+                <a href="https://github.com/williamRX/WePlate" target="_blank" rel="noopener noreferrer"
+                  class="project-header-link" aria-label="WePlate GitHub Repository">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+              <p class="project-desc">
+                Hub intelligent de recommandation de repas et de suivi d'hydratation, optimisé pour des profils individuels ou de couples. Le système génère des plans alimentaires sur-mesure en combinant les préférences culinaires de l'utilisateur avec des contraintes macro-nutritionnelles strictes indexées sur ses objectifs physiques et sportifs.
+              </p>
+              <div class="project-tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">Recherche Opérationnelle (OR)</span>
+                <span class="tag">Optimisation sous contraintes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Tune-Botrapoint -->
+        <div class="project-card-wrapper">
+          <div class="project-card glass-card">
+            <div class="project-glow"></div>
+            <div class="project-card-content">
+              <div class="project-header">
+                <div class="project-icon-wrapper">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+                    <circle cx="12" cy="5" r="2"></circle>
+                    <path d="M12 7v4"></path>
+                    <line x1="8" y1="16" x2="8.01" y2="16"></line>
+                    <line x1="16" y1="16" x2="16.01" y2="16"></line>
+                  </svg>
+                </div>
+                <div class="project-title-container" style="flex-grow: 1;">
+                  <span class="project-category">NLP / DÉTECTION D'ANOMALIES</span>
+                  <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+                    <h3 class="project-title">Tune-Botrapoint</h3>
+                    <span class="private-badge">
+                      <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        style="display: inline-block; vertical-align: middle;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                      Private
+                    </span>
+                  </div>
+                </div>
+                <a href="https://github.com/williamRX/Tune-Botrapoint" target="_blank" rel="noopener noreferrer"
+                  class="project-header-link" aria-label="Tune-Botrapoint GitHub Repository">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+              <p class="project-desc">
+                Pipeline complet d'analyse de données conçu pour scanner et auditer les commentaires issus de l'API YouTube afin d'identifier les campagnes d'influence inauthentiques (astroturfing positif) et d'attribuer un score de suspicion ("Score de Bot") global. Architecture segmentée en quatre modules : Collecteur (ingestion YouTube API v3), Analyseur de comportement (heuristiques de patterns), Moteur Linguistique (embeddings textuels) et Décideur (Machine Learning non-supervisé).
+              </p>
+              <div class="project-tags">
+                <span class="tag">API YouTube Data v3</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Extraction de features</span>
+                <span class="tag">Isolation Forest</span>
+                <span class="tag">Scikit-Learn</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Strategenetique -->
+        <div class="project-card-wrapper">
+          <div class="project-card glass-card">
+            <div class="project-glow"></div>
+            <div class="project-card-content">
+              <div class="project-header">
+                <div class="project-icon-wrapper">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="6" y1="3" x2="6" y2="15"></line>
+                    <circle cx="18" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M18 9a9 9 0 0 1-9 9"></path>
+                  </svg>
+                </div>
+                <div class="project-title-container" style="flex-grow: 1;">
+                  <span class="project-category">ALGORITHMES GÉNÉTIQUES &amp; SYSTÈMES MULTI-AGENTS</span>
+                  <h3 class="project-title">Strategenetique</h3>
+                </div>
+                <a href="https://github.com/williamRX/Strategenetique" target="_blank" rel="noopener noreferrer"
+                  class="project-header-link" aria-label="Strategenetique GitHub Repository">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+              <p class="project-desc">
+                Simulation multi-agent d'un algorithme génétique appliquée à la théorie des jeux, et plus précisément au Dilemme du Prisonnier Itéré. Développé entièrement "from scratch" sans framework externe, ce projet étudie l'évolution des stratégies comportementales au fil des générations et analyse les conditions d'émergence et de stabilisation de la coopération face à des profils défecteurs.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">NumPy (Vectorisation)</span>
+                <span class="tag">Algorithmes génétiques</span>
+                <span class="tag">Théorie des Jeux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: MoodX -->
+        <div class="project-card-wrapper">
+          <div class="project-card glass-card">
+            <div class="project-glow"></div>
+            <div class="project-card-content">
+              <div class="project-header">
+                <div class="project-icon-wrapper">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                    <circle cx="12" cy="13" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="project-title-container" style="flex-grow: 1;">
+                  <span class="project-category">COMPUTER VISION / REAL-TIME INFERENCE</span>
+                  <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+                    <h3 class="project-title">MoodX</h3>
+                    <span class="private-badge">
+                      <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        style="display: inline-block; vertical-align: middle;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                      Private
+                    </span>
+                  </div>
+                </div>
+                <a href="https://github.com/williamRX/MoodX" target="_blank" rel="noopener noreferrer"
+                  class="project-header-link" aria-label="MoodX GitHub Repository">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+              <p class="project-desc">
+                Pipeline de reconnaissance des expressions faciales (FER - Facial Expression Recognition) opérant en temps réel sur un flux vidéo direct (webcam). Le système détecte les visages et classifie instantanément les 7 émotions universelles grâce à un modèle de Deep Learning hautement optimisé pour l'inférence à faible latence.
+              </p>
+              <div class="project-tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">Real-time Inference</span>
+                <span class="tag">Deep Learning (CNN)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: Zoidberg 2.0 -->
+        <div class="project-card-wrapper">
+          <div class="project-card glass-card">
+            <div class="project-glow"></div>
+            <div class="project-card-content">
+              <div class="project-header">
+                <div class="project-icon-wrapper">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <div class="project-title-container" style="flex-grow: 1;">
+                  <span class="project-category">COMPUTER VISION / IMAGERIE MÉDICALE</span>
+                  <h3 class="project-title">Zoidberg 2.0</h3>
+                </div>
+                <a href="https://github.com/williamRX/Zoidberg-2.0" target="_blank" rel="noopener noreferrer"
+                  class="project-header-link" aria-label="Zoidberg 2.0 GitHub Repository">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+              <p class="project-desc">
+                Application d'analyse d'images médicales basée sur l'IA. Le modèle traite des radiographies pulmonaires afin d'identifier de manière autonome les indicateurs pathologiques liés à la pneumonie, validant des compétences en classification d'images complexes et en manipulation de datasets cliniques sensibles.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">CNN</span>
+                <span class="tag">Imagerie Médicale</span>
+                <span class="tag">Deep Learning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8: Voltaire -->
         <div class="project-card-wrapper">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
@@ -288,17 +521,20 @@
                     <line x1="1" y1="15" x2="4" y2="15"></line>
                   </svg>
                 </div>
-                <div class="project-title-container">
-                  <h3 class="project-title">Voltaire</h3>
-                  <span class="private-badge">
-                    <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
-                      stroke-linecap="round" stroke-linejoin="round"
-                      style="display: inline-block; vertical-align: middle;">
-                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                    </svg>
-                    Private
-                  </span>
+                <div class="project-title-container" style="flex-grow: 1;">
+                  <span class="project-category">LARGE LANGUAGE MODELS (LLM)</span>
+                  <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+                    <h3 class="project-title">Voltaire</h3>
+                    <span class="private-badge">
+                      <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        style="display: inline-block; vertical-align: middle;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                      Private
+                    </span>
+                  </div>
                 </div>
                 <a href="https://github.com/williamRX/Voltaire" target="_blank" rel="noopener noreferrer"
                   class="project-header-link" aria-label="Voltaire GitHub Repository">
@@ -311,19 +547,97 @@
                 </a>
               </div>
               <p class="project-desc">
-                A Custom French Autoregressive Transformer trained from scratch on Apple MLX.
+                Entraînement complet "from scratch" d'un modèle de langage autorégressif personnalisé pour le français de type Transformer. Ce projet d'ingénierie fondamentale a permis d'implémenter les briques de base de l'attention (Scaled Dot-Product Attention), les masques causaux, les encodages de position, ainsi que la gestion de l'entraînement matériel natif sur l'architecture Apple Silicon.
               </p>
               <div class="project-tags">
-                <span class="tag">Apple MLX</span>
-                <span class="tag">Transformer</span>
-                <span class="tag">NLP</span>
-                <span class="tag">Python</span>
+                <span class="tag">Apple MLX Framework</span>
+                <span class="tag">Transformer custom</span>
+                <span class="tag">Tokenisation native</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Card 4: RecFlix -->
+        <!-- Card 9: Diarizator -->
+        <div class="project-card-wrapper">
+          <div class="project-card glass-card">
+            <div class="project-glow"></div>
+            <div class="project-card-content">
+              <div class="project-header">
+                <div class="project-icon-wrapper">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="23"></line>
+                    <line x1="8" y1="23" x2="16" y2="23"></line>
+                  </svg>
+                </div>
+                <div class="project-title-container" style="flex-grow: 1;">
+                  <span class="project-category">AUDIO PROCESSING &amp; BIOMÉTRIE</span>
+                  <h3 class="project-title">Diarizator</h3>
+                </div>
+                <a href="https://github.com/williamRX/Diarizator" target="_blank" rel="noopener noreferrer"
+                  class="project-header-link" aria-label="Diarizator GitHub Repository">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+              <p class="project-desc">
+                Système de diarisation vocale capable d'isoler et de segmenter les différents locuteurs présents au sein d'un enregistrement audio continu. Intègre un module d'enrôlement biométrique permettant d'associer un nom à une signature ou empreinte vocale unique (Speaker Embedding), rendant possible l'identification automatique et transverse de ce locuteur dans n'importe quel flux audio futur.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Diarisation Audio</span>
+                <span class="tag">Speaker Embeddings</span>
+                <span class="tag">Clustering Adaptatif</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 10: Travel Order Resolver -->
+        <div class="project-card-wrapper">
+          <div class="project-card glass-card">
+            <div class="project-glow"></div>
+            <div class="project-card-content">
+              <div class="project-header">
+                <div class="project-icon-wrapper">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                  </svg>
+                </div>
+                <div class="project-title-container" style="flex-grow: 1;">
+                  <span class="project-category">CHATBOT NLP &amp; GRAPHES</span>
+                  <h3 class="project-title">Travel Order Resolver</h3>
+                </div>
+                <a href="https://github.com/williamRX/travel-order-resolver" target="_blank" rel="noopener noreferrer"
+                  class="project-header-link" aria-label="Travel Order Resolver GitHub Repository">
+                  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+              <p class="project-desc">
+                Agent conversationnel orienté logistique. Le chatbot qualifie l'intention de déplacement à partir d'une phrase utilisateur, extrait les entités nommées (villes de départ et d'arrivée) via un modèle NER, puis calcule un itinéraire de transport optimal. Une option avancée permet de s'affranchir des API tierces en modélisant son propre graphe de connexions réseau ferroviaire.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Classification d'intentions</span>
+                <span class="tag">NER</span>
+                <span class="tag">Algorithmique de graphes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 11: RecFlix -->
         <div class="project-card-wrapper">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
@@ -342,17 +656,20 @@
                     <line x1="17" y1="7" x2="22" y2="7"></line>
                   </svg>
                 </div>
-                <div class="project-title-container">
-                  <h3 class="project-title">RecFlix</h3>
-                  <span class="private-badge">
-                    <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
-                      stroke-linecap="round" stroke-linejoin="round"
-                      style="display: inline-block; vertical-align: middle;">
-                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                    </svg>
-                    Private
-                  </span>
+                <div class="project-title-container" style="flex-grow: 1;">
+                  <span class="project-category">SYSTÈMES DE RECOMMANDATION</span>
+                  <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+                    <h3 class="project-title">RecFlix</h3>
+                    <span class="private-badge">
+                      <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        style="display: inline-block; vertical-align: middle;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                      Private
+                    </span>
+                  </div>
                 </div>
                 <a href="https://github.com/williamRX/RecFlix" target="_blank" rel="noopener noreferrer"
                   class="project-header-link" aria-label="RecFlix GitHub Repository">
@@ -365,19 +682,18 @@
                 </a>
               </div>
               <p class="project-desc">
-                A Content-Based Movie Recommendation System built with Unsupervised Learning and FastAPI.
+                Système de recommandation basé sur le contenu cinématographique (Content-Based Filtering). Le moteur utilise des méthodes d'apprentissage non-supervisé pour projeter et mesurer les proximités thématiques et sémantiques entre les œuvres, rendu disponible via une API asynchrone haute performance.
               </p>
               <div class="project-tags">
                 <span class="tag">Unsupervised Learning</span>
+                <span class="tag">Similarité Cosinus</span>
                 <span class="tag">FastAPI</span>
-                <span class="tag">Python</span>
-                <span class="tag">Recommendations</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Card 5: Tune-Botrapoint -->
+        <!-- Card 12: Fake News Sniper -->
         <div class="project-card-wrapper">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
@@ -386,27 +702,17 @@
                 <div class="project-icon-wrapper">
                   <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
                     stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="11" width="18" height="10" rx="2"></rect>
-                    <circle cx="12" cy="5" r="2"></circle>
-                    <path d="M12 7v4"></path>
-                    <line x1="8" y1="16" x2="8.01" y2="16"></line>
-                    <line x1="16" y1="16" x2="16.01" y2="16"></line>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
                   </svg>
                 </div>
-                <div class="project-title-container">
-                  <h3 class="project-title">Tune-Botrapoint</h3>
-                  <span class="private-badge">
-                    <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
-                      stroke-linecap="round" stroke-linejoin="round"
-                      style="display: inline-block; vertical-align: middle;">
-                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                    </svg>
-                    Private
-                  </span>
+                <div class="project-title-container" style="flex-grow: 1;">
+                  <span class="project-category">TEXT CLASSIFICATION / NLP</span>
+                  <h3 class="project-title">Fake News Sniper</h3>
                 </div>
-                <a href="https://github.com/williamRX/Tune-Botrapoint" target="_blank" rel="noopener noreferrer"
-                  class="project-header-link" aria-label="Tune-Botrapoint GitHub Repository">
+                <a href="https://github.com/williamRX/Fake-News-Sniper" target="_blank" rel="noopener noreferrer"
+                  class="project-header-link" aria-label="Fake News Sniper GitHub Repository">
                   <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
                     stroke-linecap="round" stroke-linejoin="round">
                     <path
@@ -416,14 +722,12 @@
                 </a>
               </div>
               <p class="project-desc">
-                Détecteur d'astroturfing et d'inauthenticité dans les commentaires YouTube. Cet outil open-source
-                analyse les sections de commentaires pour repérer les campagnes de manipulation.
+                Application de classification sémantique entraînée pour identifier et isoler les fausses informations (Fake News). Le modèle évalue les structures textuelles et les marqueurs linguistiques suspects pour affecter un indice de fiabilité aux articles soumis.
               </p>
               <div class="project-tags">
-                <span class="tag">Data Science</span>
                 <span class="tag">NLP</span>
-                <span class="tag">Bot Detection</span>
-                <span class="tag">YouTube API</span>
+                <span class="tag">Classification Binaire</span>
+                <span class="tag">Analyse Textuelle</span>
               </div>
             </div>
           </div>

@@ -713,6 +713,17 @@ section {
   box-shadow: 0 0 10px rgba(139, 92, 246, 0.15);
 }
 
+.project-category {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent-indigo);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
 .project-title-container {
   display: flex;
   align-items: center;
