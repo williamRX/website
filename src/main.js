@@ -1,6 +1,65 @@
 import './style.css';
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Language Switcher Logic
+  const langSwitchBtn = document.getElementById('lang-switch');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+
+  const placeholderTranslations = {
+    en: {
+      name: "John Doe",
+      email: "john@example.com",
+      message: "Let's talk about machine learning..."
+    },
+    fr: {
+      name: "Votre nom",
+      email: "votre.email@exemple.com",
+      message: "Discutons de machine learning..."
+    }
+  };
+
+  const statusTranslations = {
+    en: {
+      sending: 'Sending message...',
+      success: 'Message sent successfully! I will get back to you shortly.',
+      error: 'Something went wrong. Please try again.',
+      networkError: 'Network error. Please try again later.'
+    },
+    fr: {
+      sending: 'Envoi du message en cours...',
+      success: 'Message envoyé avec succès ! Je vous répondrai rapidement.',
+      error: 'Une erreur est survenue. Veuillez réessayer.',
+      networkError: 'Erreur réseau. Veuillez réessayer plus tard.'
+    }
+  };
+
+  let currentLang = localStorage.getItem('portfolio-lang');
+  if (!currentLang) {
+    const userLang = navigator.language || navigator.userLanguage;
+    currentLang = userLang.startsWith('fr') ? 'fr' : 'en';
+  }
+
+  function updateDynamicTexts() {
+    if (nameInput) nameInput.placeholder = placeholderTranslations[currentLang].name;
+    if (emailInput) emailInput.placeholder = placeholderTranslations[currentLang].email;
+    if (messageInput) messageInput.placeholder = placeholderTranslations[currentLang].message;
+  }
+
+  document.body.classList.add(`lang-${currentLang}`);
+  updateDynamicTexts();
+  
+  if (langSwitchBtn) {
+    langSwitchBtn.addEventListener('click', () => {
+      document.body.classList.remove(`lang-${currentLang}`);
+      currentLang = currentLang === 'en' ? 'fr' : 'en';
+      document.body.classList.add(`lang-${currentLang}`);
+      localStorage.setItem('portfolio-lang', currentLang);
+      updateDynamicTexts();
+    });
+  }
+
   // 1. Set current year in footer
   const currentYearEl = document.getElementById('current-year');
   if (currentYearEl) {
@@ -112,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Reset classes
       formStatus.className = 'form-status-msg active';
-      formStatus.textContent = 'Sending message...';
+      formStatus.textContent = statusTranslations[currentLang].sending;
       
       const formData = new FormData(contactForm);
       
@@ -128,18 +187,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const json = await response.json();
         if (response.status === 200) {
           formStatus.className = 'form-status-msg active success';
-          formStatus.textContent = 'Message sent successfully! I will get back to you shortly.';
+          formStatus.textContent = statusTranslations[currentLang].success;
           contactForm.reset();
         } else {
           console.error(json);
           formStatus.className = 'form-status-msg active error';
-          formStatus.textContent = json.message || 'Something went wrong. Please try again.';
+          formStatus.textContent = json.message || statusTranslations[currentLang].error;
         }
       })
       .catch((error) => {
         console.error(error);
         formStatus.className = 'form-status-msg active error';
-        formStatus.textContent = 'Network error. Please try again later.';
+        formStatus.textContent = statusTranslations[currentLang].networkError;
       })
       .finally(() => {
         setTimeout(() => {
@@ -149,4 +208,100 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // 8. Project Details Modal Implementation
+  const projectModal = document.getElementById('project-modal');
+  const modalContent = document.getElementById('modal-project-content');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+  const modalBackdrop = document.getElementById('modal-backdrop');
+  const projectCardWrappers = document.querySelectorAll('.project-card-wrapper');
+
+  // Inject "Learn More / En savoir plus" link to all project cards dynamically
+  projectCardWrappers.forEach(wrapper => {
+    const cardContent = wrapper.querySelector('.project-card-content');
+    if (cardContent) {
+      const learnMore = document.createElement('div');
+      learnMore.className = 'project-learn-more';
+      learnMore.innerHTML = `
+        <span class="lang-en">Learn more &rarr;</span>
+        <span class="lang-fr">En savoir plus &rarr;</span>
+      `;
+      cardContent.appendChild(learnMore);
+    }
+  });
+
+  function openProjectModal(wrapper) {
+    if (!projectModal || !modalContent) return;
+
+    // Get card content elements
+    const header = wrapper.querySelector('.project-header');
+    const desc = wrapper.querySelector('.project-desc');
+    const tags = wrapper.querySelector('.project-tags');
+
+    // Clear previous modal content
+    modalContent.innerHTML = '';
+
+    // Create a container to hold cloned content
+    const container = document.createElement('div');
+    container.className = 'modal-project-details';
+
+    // Clone header, description, and tags
+    if (header) {
+      const clonedHeader = header.cloneNode(true);
+      container.appendChild(clonedHeader);
+    }
+    if (desc) {
+      const clonedDesc = desc.cloneNode(true);
+      container.appendChild(clonedDesc);
+    }
+    if (tags) {
+      const clonedTags = tags.cloneNode(true);
+      container.appendChild(clonedTags);
+    }
+
+    modalContent.appendChild(container);
+
+    // Open modal
+    document.body.classList.add('modal-open');
+    projectModal.classList.add('active');
+    projectModal.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeProjectModal() {
+    if (!projectModal) return;
+    document.body.classList.remove('modal-open');
+    projectModal.classList.remove('active');
+    projectModal.setAttribute('aria-hidden', 'true');
+  }
+
+  // Bind click event on each card
+  projectCardWrappers.forEach(wrapper => {
+    wrapper.addEventListener('click', () => {
+      openProjectModal(wrapper);
+    });
+
+    // Prevent modal from opening when clicking directly on the GitHub link
+    const githubLink = wrapper.querySelector('.project-header-link');
+    if (githubLink) {
+      githubLink.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    }
+  });
+
+  // Bind close events
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', closeProjectModal);
+  }
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener('click', closeProjectModal);
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && projectModal && projectModal.classList.contains('active')) {
+      closeProjectModal();
+    }
+  });
+
 });
+

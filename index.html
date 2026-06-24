@@ -42,20 +42,40 @@
         <span class="logo-bracket">&lt;</span>WR<span class="logo-bracket">/&gt;</span>
       </a>
       <nav class="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#about" class="nav-link">
+          <span class="lang-en">About</span>
+          <span class="lang-fr">À propos</span>
+        </a>
+        <a href="#experience" class="nav-link">
+          <span class="lang-en">Experience</span>
+          <span class="lang-fr">Expérience</span>
+        </a>
+        <a href="#projects" class="nav-link">
+          <span class="lang-en">Projects</span>
+          <span class="lang-fr">Projets</span>
+        </a>
         <a href="#stack" class="nav-link">Stack</a>
-        <a href="#education" class="nav-link">Education</a>
+        <a href="#education" class="nav-link">
+          <span class="lang-en">Education</span>
+          <span class="lang-fr">Formation</span>
+        </a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
+      <button id="lang-switch" class="lang-switch-btn" aria-label="Toggle language">
+        <span class="lang-opt lang-opt-en">EN</span>
+        <span class="lang-divider">|</span>
+        <span class="lang-opt lang-opt-fr">FR</span>
+      </button>
       <div class="nav-status">
         <span class="status-pulse"></span>
-        <span class="status-text">Available</span>
+        <span class="status-text">
+          <span class="lang-en">Available</span>
+          <span class="lang-fr">Disponible</span>
+        </span>
       </div>
     </div>
   </header>
-
+ 
   <main class="main-content">
     <!-- 1. HERO SECTION -->
     <section id="about" class="hero-section section-reveal">
@@ -69,11 +89,12 @@
             William Roux
           </h1>
           <h2 class="hero-subtitle">
-            Machine Learning &amp; Software Engineer
+            <span class="lang-en">Machine Learning &amp; MLOps Engineer</span>
+            <span class="lang-fr">Ingénieur Machine Learning &amp; MLOps</span>
           </h2>
           <p class="hero-bio">
-            Passionate about mathematics and computer science. Specialized in NLP, LLM architectures, and scalable ML
-            systems. AWS Certified Machine Learning – Associate.
+            <span class="lang-en">Passionate about mathematics and computer science. Specialized in scalable machine learning systems, autonomous LLM agents, and robust MLOps pipelines. AWS Certified Machine Learning – Associate.</span>
+            <span class="lang-fr">Passionné par les mathématiques et l'informatique. Spécialisé dans la conception de systèmes ML scalables, d'agents LLM autonomes et de pipelines MLOps robustes. Certifié AWS Machine Learning – Associate.</span>
           </p>
           <div class="hero-ctas">
             <a href="https://github.com/williamRX" target="_blank" rel="noopener noreferrer" class="btn btn-primary"
@@ -84,7 +105,10 @@
                   d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
                 </path>
               </svg>
-              <span>View GitHub</span>
+              <span>
+                <span class="lang-en">View GitHub</span>
+                <span class="lang-fr">Voir GitHub</span>
+              </span>
             </a>
             <a href="https://www.linkedin.com/in/roux-william/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
               id="cta-linkedin">
@@ -94,7 +118,10 @@
                 <rect x="2" y="9" width="4" height="12"></rect>
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
-              <span>Connect on LinkedIn</span>
+              <span>
+                <span class="lang-en">Connect on LinkedIn</span>
+                <span class="lang-fr">Se connecter sur LinkedIn</span>
+              </span>
             </a>
             <a href="/william-roux-cv.pdf" download="William_Roux_CV.pdf" class="btn btn-tertiary" id="cta-cv">
               <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2"
@@ -103,7 +130,10 @@
                 <polyline points="7 10 12 15 17 10"></polyline>
                 <line x1="12" y1="15" x2="12" y2="3"></line>
               </svg>
-              <span>Download CV</span>
+              <span>
+                <span class="lang-en">Download CV</span>
+                <span class="lang-fr">Télécharger le CV</span>
+              </span>
             </a>
           </div>
         </div>
@@ -119,8 +149,14 @@
     <!-- 2. EXPERIENCE SECTION -->
     <section id="experience" class="experience-section section-reveal">
       <div class="section-header">
-        <span class="section-tag">// Professional Journey</span>
-        <h2 class="section-title">Work Experience</h2>
+        <span class="section-tag">
+          <span class="lang-en">// Professional Journey</span>
+          <span class="lang-fr">// Parcours Professionnel</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">Work Experience</span>
+          <span class="lang-fr">Expérience Professionnelle</span>
+        </h2>
       </div>
 
       <div class="timeline-container">
@@ -134,33 +170,95 @@
             <div class="experience-card glass-card">
               <div class="card-header">
                 <div class="header-main">
-                  <h3 class="role-title">Apprentice ML &amp; Software Engineer</h3>
+                  <h3 class="role-title">
+                    <span class="lang-en">Apprentice ML &amp; Software Engineer</span>
+                    <span class="lang-fr">Apprenti ML &amp; Software Engineer</span>
+                  </h3>
                   <h4 class="company-name">Capgemini</h4>
                 </div>
-                <span class="duration-badge">2.5 years</span>
+                <span class="duration-badge">
+                  <span class="lang-en">2.5 years</span>
+                  <span class="lang-fr">2,5 ans</span>
+                </span>
               </div>
 
               <div class="projects-detail">
+                <!-- Subproject 1: SNCF -->
                 <div class="subproject">
                   <div class="subproject-title">
                     <span class="subproject-bullet">&lt;&gt;</span>
-                    <h5>Project SNCF</h5>
+                    <h5>
+                      <span class="lang-en">Project SNCF</span>
+                      <span class="lang-fr">Projet SNCF</span>
+                    </h5>
+                    <span class="subproject-duration">
+                      <span class="lang-en">1 year</span>
+                      <span class="lang-fr">1 an</span>
+                    </span>
                   </div>
                   <p class="subproject-desc">
-                    Designed and built a <strong>RAG (Retrieval-Augmented Generation) system</strong> for technical
-                    documentation. Developed full-stack features using <strong>Java</strong> and
-                    <strong>Angular</strong>.
+                    <span class="lang-en">Designed and built an AI assistant (<strong>RAG Chatbot</strong>) to streamline engine failure analysis, search complex technical documentation, and optimize maintenance schedules. Developed full-stack features using <strong>Java (Spring Boot)</strong> and <strong>Angular</strong>, and managed CI/CD pipelines via <strong>Jenkins</strong>.</span>
+                    <span class="lang-fr">Conception et développement d'un assistant IA (<strong>Chatbot RAG</strong>) facilitant l'analyse des pannes, l'exploitation de la documentation technique et l'adaptation des schémas de maintenance des engins. Développement de fonctionnalités full-stack avec <strong>Java (Spring Boot)</strong> et <strong>Angular</strong>, et configuration de pipelines CI/CD sous <strong>Jenkins</strong>.</span>
                   </p>
+                  <div class="subproject-tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">Angular</span>
+                    <span class="tag">RAG</span>
+                    <span class="tag">Jenkins</span>
+                    <span class="tag">Git</span>
+                  </div>
                 </div>
+
+                <!-- Subproject 2: ENEDIS -->
                 <div class="subproject">
                   <div class="subproject-title">
                     <span class="subproject-bullet">&lt;&gt;</span>
-                    <h5>Project ENEDIS</h5>
+                    <h5>
+                      <span class="lang-en">Project ENEDIS</span>
+                      <span class="lang-fr">Projet ENEDIS</span>
+                    </h5>
+                    <span class="subproject-duration">
+                      <span class="lang-en">1 year</span>
+                      <span class="lang-fr">1 an</span>
+                    </span>
                   </div>
                   <p class="subproject-desc">
-                    Handled production <strong>MCO (maintenance)</strong>. Created and optimized complex <strong>SQL
-                      scripts</strong> for automated data processing and production fixes.
+                    <span class="lang-en">Handled production <strong>MCO (maintenance)</strong> and resolved application anomalies on a proprietary <strong>PHP</strong> framework. Created and optimized complex <strong>SQL</strong> scripts for automated data processing and production fixes.</span>
+                    <span class="lang-fr">Gestion du <strong>MCO (Maintien en Conditions Opérationnelles)</strong> en production. Résolution d'anomalies applicatives et développement de correctifs sur un framework <strong>PHP</strong> propriétaire. Création et optimisation de <strong>scripts SQL</strong> complexes pour le traitement automatique des données et les correctifs de production.</span>
                   </p>
+                  <div class="subproject-tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">SQL (Oracle)</span>
+                    <span class="tag">Bash</span>
+                    <span class="tag">Git</span>
+                  </div>
+                </div>
+
+                <!-- Subproject 3: Intermission -->
+                <div class="subproject">
+                  <div class="subproject-title">
+                    <span class="subproject-bullet">&lt;&gt;</span>
+                    <h5>
+                      <span class="lang-en">Technical Upskilling</span>
+                      <span class="lang-fr">Intermission &amp; Formation</span>
+                    </h5>
+                    <span class="subproject-duration">
+                      <span class="lang-en">6 months</span>
+                      <span class="lang-fr">6 mois</span>
+                    </span>
+                  </div>
+                  <p class="subproject-desc">
+                    <span class="lang-en">Dedicated period for technical upskilling across multiple development environments. Successfully prepared for and obtained the <strong>AWS Certified Cloud Practitioner</strong> credential.</span>
+                    <span class="lang-fr">Période d'intermission dédiée à la montée en compétences techniques sur différentes stacks et à l'obtention de la certification <strong>AWS Certified Cloud Practitioner</strong>.</span>
+                  </p>
+                  <div class="subproject-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">AWS (Cloud Practitioner)</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Angular</span>
+                    <span class="tag">PHP</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -172,13 +270,19 @@
     <!-- 3. PROJECTS SECTION -->
     <section id="projects" class="projects-section section-reveal">
       <div class="section-header">
-        <span class="section-tag">// Selected Creations</span>
-        <h2 class="section-title">Featured Projects</h2>
+        <span class="section-tag">
+          <span class="lang-en">// Selected Creations</span>
+          <span class="lang-fr">// Réalisations Sélectionnées</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">Featured Projects</span>
+          <span class="lang-fr">Projets Phares</span>
+        </h2>
       </div>
 
       <div class="projects-grid">
         <!-- Card 1: Siquelator -->
-        <div class="project-card-wrapper">
+        <div class="project-card-wrapper" data-project="Siquelator">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
             <div class="project-card-content">
@@ -191,8 +295,26 @@
                   </svg>
                 </div>
                 <div class="project-title-container" style="flex-grow: 1;">
-                  <span class="project-category">AGENTS IA AUTONOMES &amp; LLM</span>
-                  <h3 class="project-title">Siquelator</h3>
+                  <span class="project-category">
+                    <span class="lang-en">AUTONOMOUS AI AGENTS &amp; LLMs</span>
+                    <span class="lang-fr">AGENTS IA AUTONOMES &amp; LLM</span>
+                  </span>
+                  <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+                    <h3 class="project-title">Siquelator</h3>
+                    <span class="project-type-badge personal">
+                      <span class="lang-en">Personal</span>
+                      <span class="lang-fr">Perso</span>
+                    </span>
+                    <span class="private-badge">
+                      <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        style="display: inline-block; vertical-align: middle;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                      Private
+                    </span>
+                  </div>
                 </div>
                 <a href="https://github.com/williamRX/Siquelator" target="_blank" rel="noopener noreferrer"
                   class="project-header-link" aria-label="Siquelator GitHub Repository">
@@ -205,7 +327,14 @@
                 </a>
               </div>
               <p class="project-desc">
-                Développement d'un agent IA autonome capable de traduire des requêtes formulées en langage naturel en requêtes SQL complexes. Le système intègre une boucle de rétroaction s'exécutant en arrière-plan : il teste directement les requêtes sur la base de données cible et déploie un pipeline d'auto-correction (Self-Correction Loop) en analysant les traces d'erreurs générées pour reformuler son code de manière itérative. Conçu pour fonctionner de manière 100% locale et souveraine.
+                <span class="project-summary-short">
+                  <span class="lang-en">Autonomous local AI agent translating natural language to SQL with a self-debugging feedback loop.</span>
+                  <span class="lang-fr">Agent IA autonome local traduisant le langage naturel en SQL avec boucle d'auto-correction.</span>
+                </span>
+                <span class="project-summary-full">
+                  <span class="lang-en">Development of an autonomous AI agent capable of translating natural language queries into complex SQL. The system integrates a background feedback loop that tests queries directly on the target database and deploys a self-correction pipeline (Self-Debugging) by analyzing error logs to iteratively reformulate its code. Designed to operate 100% locally and sovereignly.</span>
+                  <span class="lang-fr">Développement d'un agent IA autonome capable de traduire des requêtes formulées en langage naturel en requêtes SQL complexes. Le système intègre une boucle de rétroaction s'exécutant en arrière-plan : il teste directement les requêtes sur la base de données cible et déploie un pipeline d'auto-correction (Self-Correction Loop) en analysant les traces d'erreurs générées pour reformuler son code de manière itérative. Conçu pour fonctionner de manière 100% locale et souveraine.</span>
+                </span>
               </p>
               <div class="project-tags">
                 <span class="tag">LangChain</span>
@@ -219,7 +348,7 @@
         </div>
 
         <!-- Card 2: Astro-Retrieve -->
-        <div class="project-card-wrapper">
+        <div class="project-card-wrapper" data-project="Astro-Retrieve">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
             <div class="project-card-content">
@@ -233,9 +362,16 @@
                   </svg>
                 </div>
                 <div class="project-title-container" style="flex-grow: 1;">
-                  <span class="project-category">RAG AVANCÉ &amp; MLOPS</span>
+                  <span class="project-category">
+                    <span class="lang-en">ADVANCED RAG &amp; MLOPS</span>
+                    <span class="lang-fr">RAG AVANCÉ &amp; MLOPS</span>
+                  </span>
                   <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
                     <h3 class="project-title">Astro-Retrieve</h3>
+                    <span class="project-type-badge personal">
+                      <span class="lang-en">Personal</span>
+                      <span class="lang-fr">Perso</span>
+                    </span>
                     <span class="private-badge">
                       <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
                         stroke-linecap="round" stroke-linejoin="round"
@@ -258,7 +394,14 @@
                 </a>
               </div>
               <p class="project-desc">
-                Moteur de recherche et de génération augmentée (RAG) de niveau industriel intégrant une approche MLOps complète. Le projet inclut le fine-tuning personnalisé de modèles d'embedding (sous PyTorch) et s'appuie sur une stratégie de recherche hybride (dense/vectorielle et lexicale) connectée à une base vectorielle locale, interfacée avec des LLM via Ollama et FastAPI.
+                <span class="project-summary-short">
+                  <span class="lang-en">Industrial RAG engine with fine-tuned embeddings, hybrid search, and FastAPI deployment.</span>
+                  <span class="lang-fr">Moteur RAG industriel avec embeddings fine-tunés, recherche hybride et API FastAPI.</span>
+                </span>
+                <span class="project-summary-full">
+                  <span class="lang-en">Industrial-grade Retrieval-Augmented Generation (RAG) engine integrating a comprehensive MLOps workflow. Features custom fine-tuning of embedding models (PyTorch) and a hybrid search strategy (dense vector and lexical) connected to a local vector store, interfaced with LLMs via Ollama and FastAPI.</span>
+                  <span class="lang-fr">Moteur de recherche et de génération augmentée (RAG) de niveau industriel intégrant une approche MLOps complète. Le projet inclut le fine-tuning personnalisé de modèles d'embedding (sous PyTorch) et s'appuie sur une stratégie de recherche hybride (dense/vectorielle et lexicale) connectée à une base vectorielle locale, interfacée avec des LLM via Ollama et FastAPI.</span>
+                </span>
               </p>
               <div class="project-tags">
                 <span class="tag">PyTorch</span>
@@ -273,7 +416,7 @@
         </div>
 
         <!-- Card 3: WePlate -->
-        <div class="project-card-wrapper">
+        <div class="project-card-wrapper" data-project="WePlate">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
             <div class="project-card-content">
@@ -287,8 +430,26 @@
                   </svg>
                 </div>
                 <div class="project-title-container" style="flex-grow: 1;">
-                  <span class="project-category">NUTRITION &amp; RECHERCHE OPÉRATIONNELLE</span>
-                  <h3 class="project-title">WePlate</h3>
+                  <span class="project-category">
+                    <span class="lang-en">NUTRITION &amp; OPERATIONS RESEARCH</span>
+                    <span class="lang-fr">NUTRITION &amp; RECHERCHE OPÉRATIONNELLE</span>
+                  </span>
+                  <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+                    <h3 class="project-title">WePlate</h3>
+                    <span class="project-type-badge personal">
+                      <span class="lang-en">Personal</span>
+                      <span class="lang-fr">Perso</span>
+                    </span>
+                    <span class="private-badge">
+                      <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        style="display: inline-block; vertical-align: middle;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                      Private
+                    </span>
+                  </div>
                 </div>
                 <a href="https://github.com/williamRX/WePlate" target="_blank" rel="noopener noreferrer"
                   class="project-header-link" aria-label="WePlate GitHub Repository">
@@ -301,7 +462,14 @@
                 </a>
               </div>
               <p class="project-desc">
-                Hub intelligent de recommandation de repas et de suivi d'hydratation, optimisé pour des profils individuels ou de couples. Le système génère des plans alimentaires sur-mesure en combinant les préférences culinaires de l'utilisateur avec des contraintes macro-nutritionnelles strictes indexées sur ses objectifs physiques et sportifs.
+                <span class="project-summary-short">
+                  <span class="lang-en">Intelligent meal recommendation hub generating custom dietary plans under strict nutritional constraints.</span>
+                  <span class="lang-fr">Générateur intelligent de plans alimentaires sur-mesure sous contraintes macro-nutritionnelles.</span>
+                </span>
+                <span class="project-summary-full">
+                  <span class="lang-en">Intelligent meal recommendation and hydration tracking hub, optimized for individual or couple profiles. Generates tailored dietary plans by combining user preferences with strict macro-nutritional constraints indexed on physical and athletic goals.</span>
+                  <span class="lang-fr">Hub intelligent de recommandation de repas et de suivi d'hydratation, optimisé pour des profils individuels ou de couples. Le système génère des plans alimentaires sur-mesure en combinant les préférences culinaires de l'utilisateur avec des contraintes macro-nutritionnelles strictes indexées sur ses objectifs physiques et sportifs.</span>
+                </span>
               </p>
               <div class="project-tags">
                 <span class="tag">PyTorch</span>
@@ -314,7 +482,7 @@
         </div>
 
         <!-- Card 4: Tune-Botrapoint -->
-        <div class="project-card-wrapper">
+        <div class="project-card-wrapper" data-project="Tune-Botrapoint">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
             <div class="project-card-content">
@@ -330,9 +498,16 @@
                   </svg>
                 </div>
                 <div class="project-title-container" style="flex-grow: 1;">
-                  <span class="project-category">NLP / DÉTECTION D'ANOMALIES</span>
+                  <span class="project-category">
+                    <span class="lang-en">NLP / ANOMALY DETECTION</span>
+                    <span class="lang-fr">NLP / DÉTECTION D'ANOMALIES</span>
+                  </span>
                   <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
                     <h3 class="project-title">Tune-Botrapoint</h3>
+                    <span class="project-type-badge personal">
+                      <span class="lang-en">Personal</span>
+                      <span class="lang-fr">Perso</span>
+                    </span>
                     <span class="private-badge">
                       <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
                         stroke-linecap="round" stroke-linejoin="round"
@@ -355,7 +530,14 @@
                 </a>
               </div>
               <p class="project-desc">
-                Pipeline complet d'analyse de données conçu pour scanner et auditer les commentaires issus de l'API YouTube afin d'identifier les campagnes d'influence inauthentiques (astroturfing positif) et d'attribuer un score de suspicion ("Score de Bot") global. Architecture segmentée en quatre modules : Collecteur (ingestion YouTube API v3), Analyseur de comportement (heuristiques de patterns), Moteur Linguistique (embeddings textuels) et Décideur (Machine Learning non-supervisé).
+                <span class="project-summary-short">
+                  <span class="lang-en">NLP and Machine Learning pipeline auditing YouTube comments to detect bot campaigns and astroturfing.</span>
+                  <span class="lang-fr">Pipeline NLP et ML détectant les campagnes d'astroturfing et de bots sur YouTube.</span>
+                </span>
+                <span class="project-summary-full">
+                  <span class="lang-en">End-to-end data analysis pipeline designed to scan and audit comments from the YouTube API to identify inauthentic influence campaigns (positive astroturfing) and compute a global bot score. Architecture segmented into four modules: Collector (YouTube API v3 ingestion), Behavior Analyzer (heuristics), Language Engine (NLP/embeddings), and Decision Maker (unsupervised ML).</span>
+                  <span class="lang-fr">Pipeline complet d'analyse de données conçu pour scanner et auditer les commentaires issus de l'API YouTube afin d'identifier les campagnes d'influence inauthentiques (astroturfing positif) et d'attribuer un score de suspicion ("Score de Bot") global. Architecture segmentée en quatre modules : Collecteur (ingestion YouTube API v3), Analyseur de comportement (heuristiques de patterns), Moteur Linguistique (embeddings textuels) et Décideur (Machine Learning non-supervisé).</span>
+                </span>
               </p>
               <div class="project-tags">
                 <span class="tag">API YouTube Data v3</span>
@@ -369,7 +551,7 @@
         </div>
 
         <!-- Card 5: Strategenetique -->
-        <div class="project-card-wrapper">
+        <div class="project-card-wrapper" data-project="Strategenetique">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
             <div class="project-card-content">
@@ -384,8 +566,26 @@
                   </svg>
                 </div>
                 <div class="project-title-container" style="flex-grow: 1;">
-                  <span class="project-category">ALGORITHMES GÉNÉTIQUES &amp; SYSTÈMES MULTI-AGENTS</span>
-                  <h3 class="project-title">Strategenetique</h3>
+                  <span class="project-category">
+                    <span class="lang-en">GENETIC ALGORITHMS &amp; MULTI-AGENT SYSTEMS</span>
+                    <span class="lang-fr">ALGORITHMES GÉNÉTIQUES &amp; SYSTÈMES MULTI-AGENTS</span>
+                  </span>
+                  <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+                    <h3 class="project-title">Strategenetique</h3>
+                    <span class="project-type-badge personal">
+                      <span class="lang-en">Personal</span>
+                      <span class="lang-fr">Perso</span>
+                    </span>
+                    <span class="private-badge">
+                      <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        style="display: inline-block; vertical-align: middle;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                      Private
+                    </span>
+                  </div>
                 </div>
                 <a href="https://github.com/williamRX/Strategenetique" target="_blank" rel="noopener noreferrer"
                   class="project-header-link" aria-label="Strategenetique GitHub Repository">
@@ -398,7 +598,14 @@
                 </a>
               </div>
               <p class="project-desc">
-                Simulation multi-agent d'un algorithme génétique appliquée à la théorie des jeux, et plus précisément au Dilemme du Prisonnier Itéré. Développé entièrement "from scratch" sans framework externe, ce projet étudie l'évolution des stratégies comportementales au fil des générations et analyse les conditions d'émergence et de stabilisation de la coopération face à des profils défecteurs.
+                <span class="project-summary-short">
+                  <span class="lang-en">Multi-agent genetic algorithm simulating behavioral strategies and cooperation in the Prisoner's Dilemma.</span>
+                  <span class="lang-fr">Simulation multi-agent d'un algorithme génétique appliqué au Dilemme du Prisonnier.</span>
+                </span>
+                <span class="project-summary-full">
+                  <span class="lang-en">Multi-agent simulation of a genetic algorithm applied to game theory, specifically the Iterated Prisoner's Dilemma. Built entirely from scratch without external frameworks, this project studies the evolution of strategies over generations and analyzes the conditions for the emergence and stabilization of cooperation.</span>
+                  <span class="lang-fr">Simulation multi-agent d'un algorithme génétique appliquée à la théorie des jeux, et plus précisément au Dilemme du Prisonnier Itéré. Développé entièrement "from scratch" sans framework externe, ce projet étudie l'évolution des stratégies comportementales au fil des générations et analyse les conditions d'émergence et de stabilisation de la coopération face à des profils défecteurs.</span>
+                </span>
               </p>
               <div class="project-tags">
                 <span class="tag">Python</span>
@@ -411,7 +618,7 @@
         </div>
 
         <!-- Card 6: MoodX -->
-        <div class="project-card-wrapper">
+        <div class="project-card-wrapper" data-project="MoodX">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
             <div class="project-card-content">
@@ -424,9 +631,16 @@
                   </svg>
                 </div>
                 <div class="project-title-container" style="flex-grow: 1;">
-                  <span class="project-category">COMPUTER VISION / REAL-TIME INFERENCE</span>
+                  <span class="project-category">
+                    <span class="lang-en">COMPUTER VISION / REAL-TIME INFERENCE</span>
+                    <span class="lang-fr">COMPUTER VISION / REAL-TIME INFERENCE</span>
+                  </span>
                   <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
                     <h3 class="project-title">MoodX</h3>
+                    <span class="project-type-badge personal">
+                      <span class="lang-en">Personal</span>
+                      <span class="lang-fr">Perso</span>
+                    </span>
                     <span class="private-badge">
                       <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
                         stroke-linecap="round" stroke-linejoin="round"
@@ -449,7 +663,14 @@
                 </a>
               </div>
               <p class="project-desc">
-                Pipeline de reconnaissance des expressions faciales (FER - Facial Expression Recognition) opérant en temps réel sur un flux vidéo direct (webcam). Le système détecte les visages et classifie instantanément les 7 émotions universelles grâce à un modèle de Deep Learning hautement optimisé pour l'inférence à faible latence.
+                <span class="project-summary-short">
+                  <span class="lang-en">Real-time facial expression recognition pipeline classifying emotions from webcam video streams.</span>
+                  <span class="lang-fr">Reconnaissance d'expressions faciales en temps réel sur flux webcam via CNN optimisé.</span>
+                </span>
+                <span class="project-summary-full">
+                  <span class="lang-en">Real-time Facial Expression Recognition (FER) pipeline operating on a live webcam video feed. Detects faces and instantly classifies 7 universal emotions using a Deep Learning model highly optimized for low-latency inference.</span>
+                  <span class="lang-fr">Pipeline de reconnaissance des expressions faciales (FER - Facial Expression Recognition) opérant en temps réel sur un flux vidéo direct (webcam). Le système détecte les visages et classifie instantanément les 7 émotions universelles grâce à un modèle de Deep Learning hautement optimisé pour l'inférence à faible latence.</span>
+                </span>
               </p>
               <div class="project-tags">
                 <span class="tag">PyTorch</span>
@@ -462,7 +683,7 @@
         </div>
 
         <!-- Card 7: Zoidberg 2.0 -->
-        <div class="project-card-wrapper">
+        <div class="project-card-wrapper" data-project="Zoidberg">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
             <div class="project-card-content">
@@ -474,8 +695,16 @@
                   </svg>
                 </div>
                 <div class="project-title-container" style="flex-grow: 1;">
-                  <span class="project-category">COMPUTER VISION / IMAGERIE MÉDICALE</span>
-                  <h3 class="project-title">Zoidberg 2.0</h3>
+                  <span class="project-category">
+                    <span class="lang-en">COMPUTER VISION / MEDICAL IMAGING</span>
+                    <span class="lang-fr">COMPUTER VISION / IMAGERIE MÉDICALE</span>
+                  </span>
+                  <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+                    <h3 class="project-title">Zoidberg 2.0</h3>
+                    <span class="project-type-badge epitech">
+                      Epitech
+                    </span>
+                  </div>
                 </div>
                 <a href="https://github.com/williamRX/Zoidberg-2.0" target="_blank" rel="noopener noreferrer"
                   class="project-header-link" aria-label="Zoidberg 2.0 GitHub Repository">
@@ -488,7 +717,14 @@
                 </a>
               </div>
               <p class="project-desc">
-                Application d'analyse d'images médicales basée sur l'IA. Le modèle traite des radiographies pulmonaires afin d'identifier de manière autonome les indicateurs pathologiques liés à la pneumonie, validant des compétences en classification d'images complexes et en manipulation de datasets cliniques sensibles.
+                <span class="project-summary-short">
+                  <span class="lang-en">Deep Learning medical imaging application detecting pneumonia indicators on chest X-rays.</span>
+                  <span class="lang-fr">Analyse d'images médicales par Deep Learning pour la détection de la pneumonie sur radiographie.</span>
+                </span>
+                <span class="project-summary-full">
+                  <span class="lang-en">AI-driven medical image analysis application. The model processes chest X-rays to autonomously identify pathological indicators of pneumonia, demonstrating expertise in complex image classification and handling sensitive clinical datasets.</span>
+                  <span class="lang-fr">Application d'analyse d'images médicales basée sur l'IA. Le modèle traite des radiographies pulmonaires afin d'identifier de manière autonome les indicateurs pathologiques liés à la pneumonie, validant des compétences en classification d'images complexes et en manipulation de datasets cliniques sensibles.</span>
+                </span>
               </p>
               <div class="project-tags">
                 <span class="tag">Computer Vision</span>
@@ -501,7 +737,7 @@
         </div>
 
         <!-- Card 8: Voltaire -->
-        <div class="project-card-wrapper">
+        <div class="project-card-wrapper" data-project="Voltaire">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
             <div class="project-card-content">
@@ -522,9 +758,16 @@
                   </svg>
                 </div>
                 <div class="project-title-container" style="flex-grow: 1;">
-                  <span class="project-category">LARGE LANGUAGE MODELS (LLM)</span>
+                  <span class="project-category">
+                    <span class="lang-en">LARGE LANGUAGE MODELS (LLMs)</span>
+                    <span class="lang-fr">LARGE LANGUAGE MODELS (LLM)</span>
+                  </span>
                   <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
                     <h3 class="project-title">Voltaire</h3>
+                    <span class="project-type-badge personal">
+                      <span class="lang-en">Personal</span>
+                      <span class="lang-fr">Perso</span>
+                    </span>
                     <span class="private-badge">
                       <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
                         stroke-linecap="round" stroke-linejoin="round"
@@ -547,7 +790,14 @@
                 </a>
               </div>
               <p class="project-desc">
-                Entraînement complet "from scratch" d'un modèle de langage autorégressif personnalisé pour le français de type Transformer. Ce projet d'ingénierie fondamentale a permis d'implémenter les briques de base de l'attention (Scaled Dot-Product Attention), les masques causaux, les encodages de position, ainsi que la gestion de l'entraînement matériel natif sur l'architecture Apple Silicon.
+                <span class="project-summary-short">
+                  <span class="lang-en">Autoregressive French Transformer model trained from scratch with Apple Silicon MLX optimization.</span>
+                  <span class="lang-fr">Modèle de langage Transformer français autorégressif entraîné "from scratch" avec Apple MLX.</span>
+                </span>
+                <span class="project-summary-full">
+                  <span class="lang-en">Full training from scratch of a custom autoregressive French Language Model based on the Transformer architecture. Implements core attention mechanisms (Scaled Dot-Product Attention), causal masking, positional encoding, and native training optimization on Apple Silicon.</span>
+                  <span class="lang-fr">Entraînement complet "from scratch" d'un modèle de langage autorégressif personnalisé pour le français de type Transformer. Ce projet d'ingénierie fondamentale a permis d'implémenter les briques de base de l'attention (Scaled Dot-Product Attention), les masques causaux, les encodages de position, ainsi que la gestion de l'entraînement matériel natif sur l'architecture Apple Silicon.</span>
+                </span>
               </p>
               <div class="project-tags">
                 <span class="tag">Apple MLX Framework</span>
@@ -559,7 +809,7 @@
         </div>
 
         <!-- Card 9: Diarizator -->
-        <div class="project-card-wrapper">
+        <div class="project-card-wrapper" data-project="Diarizator">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
             <div class="project-card-content">
@@ -574,8 +824,26 @@
                   </svg>
                 </div>
                 <div class="project-title-container" style="flex-grow: 1;">
-                  <span class="project-category">AUDIO PROCESSING &amp; BIOMÉTRIE</span>
-                  <h3 class="project-title">Diarizator</h3>
+                  <span class="project-category">
+                    <span class="lang-en">AUDIO PROCESSING &amp; BIOMETRICS</span>
+                    <span class="lang-fr">AUDIO PROCESSING &amp; BIOMÉTRIE</span>
+                  </span>
+                  <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+                    <h3 class="project-title">Diarizator</h3>
+                    <span class="project-type-badge personal">
+                      <span class="lang-en">Personal</span>
+                      <span class="lang-fr">Perso</span>
+                    </span>
+                    <span class="private-badge">
+                      <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        style="display: inline-block; vertical-align: middle;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                      Private
+                    </span>
+                  </div>
                 </div>
                 <a href="https://github.com/williamRX/Diarizator" target="_blank" rel="noopener noreferrer"
                   class="project-header-link" aria-label="Diarizator GitHub Repository">
@@ -588,7 +856,14 @@
                 </a>
               </div>
               <p class="project-desc">
-                Système de diarisation vocale capable d'isoler et de segmenter les différents locuteurs présents au sein d'un enregistrement audio continu. Intègre un module d'enrôlement biométrique permettant d'associer un nom à une signature ou empreinte vocale unique (Speaker Embedding), rendant possible l'identification automatique et transverse de ce locuteur dans n'importe quel flux audio futur.
+                <span class="project-summary-short">
+                  <span class="lang-en">Audio diarization and speaker recognition system using voice biometrics and embeddings.</span>
+                  <span class="lang-fr">Système de diarisation audio et reconnaissance de locuteurs par signatures vocales.</span>
+                </span>
+                <span class="project-summary-full">
+                  <span class="lang-en">Speaker diarization system capable of isolating and segmenting different speakers in a continuous audio recording. Features a biometric enrollment module mapping names to unique voiceprints (Speaker Embeddings), enabling cross-recording speaker identification.</span>
+                  <span class="lang-fr">Système de diarisation vocale capable d'isoler et de segmenter les différents locuteurs présents au sein d'un enregistrement audio continu. Intègre un module d'enrôlement biométrique permettant d'associer un nom à une signature ou empreinte vocale unique (Speaker Embedding), rendant possible l'identification automatique et transverse de ce locuteur dans n'importe quel flux audio futur.</span>
+                </span>
               </p>
               <div class="project-tags">
                 <span class="tag">Diarisation Audio</span>
@@ -600,7 +875,7 @@
         </div>
 
         <!-- Card 10: Travel Order Resolver -->
-        <div class="project-card-wrapper">
+        <div class="project-card-wrapper" data-project="Travel-Order-Resolver">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
             <div class="project-card-content">
@@ -612,8 +887,16 @@
                   </svg>
                 </div>
                 <div class="project-title-container" style="flex-grow: 1;">
-                  <span class="project-category">CHATBOT NLP &amp; GRAPHES</span>
-                  <h3 class="project-title">Travel Order Resolver</h3>
+                  <span class="project-category">
+                    <span class="lang-en">NLP CHATBOT &amp; GRAPHS</span>
+                    <span class="lang-fr">CHATBOT NLP &amp; GRAPHES</span>
+                  </span>
+                  <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+                    <h3 class="project-title">Travel Order Resolver</h3>
+                    <span class="project-type-badge epitech">
+                      Epitech
+                    </span>
+                  </div>
                 </div>
                 <a href="https://github.com/williamRX/travel-order-resolver" target="_blank" rel="noopener noreferrer"
                   class="project-header-link" aria-label="Travel Order Resolver GitHub Repository">
@@ -626,7 +909,14 @@
                 </a>
               </div>
               <p class="project-desc">
-                Agent conversationnel orienté logistique. Le chatbot qualifie l'intention de déplacement à partir d'une phrase utilisateur, extrait les entités nommées (villes de départ et d'arrivée) via un modèle NER, puis calcule un itinéraire de transport optimal. Une option avancée permet de s'affranchir des API tierces en modélisant son propre graphe de connexions réseau ferroviaire.
+                <span class="project-summary-short">
+                  <span class="lang-en">Logistics conversational agent using NER for entity extraction and route optimization on graph networks.</span>
+                  <span class="lang-fr">Agent conversationnel logistique utilisant le NER et le calcul d'itinéraires sur graphes.</span>
+                </span>
+                <span class="project-summary-full">
+                  <span class="lang-en">Logistics-oriented conversational agent. The chatbot classifies travel intent from queries, extracts named entities (departure and arrival cities) using a NER model, and computes optimal transport routes. Includes a custom graph network modeling option to operate without external APIs.</span>
+                  <span class="lang-fr">Agent conversationnel orienté logistique. Le chatbot qualifie l'intention de déplacement à partir d'une phrase utilisateur, extrait les entités nommées (villes de départ et d'arrivée) via un modèle NER, puis calcule un itinéraire de transport optimal. Une option avancée permet de s'affranchir des API tierces en modélisant son propre graphe de connexions réseau ferroviaire.</span>
+                </span>
               </p>
               <div class="project-tags">
                 <span class="tag">Classification d'intentions</span>
@@ -638,7 +928,7 @@
         </div>
 
         <!-- Card 11: RecFlix -->
-        <div class="project-card-wrapper">
+        <div class="project-card-wrapper" data-project="RecFlix">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
             <div class="project-card-content">
@@ -657,9 +947,16 @@
                   </svg>
                 </div>
                 <div class="project-title-container" style="flex-grow: 1;">
-                  <span class="project-category">SYSTÈMES DE RECOMMANDATION</span>
+                  <span class="project-category">
+                    <span class="lang-en">RECOMMENDER SYSTEMS</span>
+                    <span class="lang-fr">SYSTÈMES DE RECOMMANDATION</span>
+                  </span>
                   <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
                     <h3 class="project-title">RecFlix</h3>
+                    <span class="project-type-badge personal">
+                      <span class="lang-en">Personal</span>
+                      <span class="lang-fr">Perso</span>
+                    </span>
                     <span class="private-badge">
                       <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
                         stroke-linecap="round" stroke-linejoin="round"
@@ -682,7 +979,14 @@
                 </a>
               </div>
               <p class="project-desc">
-                Système de recommandation basé sur le contenu cinématographique (Content-Based Filtering). Le moteur utilise des méthodes d'apprentissage non-supervisé pour projeter et mesurer les proximités thématiques et sémantiques entre les œuvres, rendu disponible via une API asynchrone haute performance.
+                <span class="project-summary-short">
+                  <span class="lang-en">Movie recommendation engine utilizing cosine similarity and unsupervised learning via an API.</span>
+                  <span class="lang-fr">Moteur de recommandation de films par similarité cosinus via une API asynchrone.</span>
+                </span>
+                <span class="project-summary-full">
+                  <span class="lang-en">Content-based movie recommendation system. The engine uses unsupervised learning to project and measure thematic and semantic similarities between films, served via a high-performance asynchronous API.</span>
+                  <span class="lang-fr">Système de recommandation basé sur le contenu cinématographique (Content-Based Filtering). Le moteur utilise des méthodes d'apprentissage non-supervisé pour projeter et mesurer les proximités thématiques et sémantiques entre les œuvres, rendu disponible via une API asynchrone haute performance.</span>
+                </span>
               </p>
               <div class="project-tags">
                 <span class="tag">Unsupervised Learning</span>
@@ -694,7 +998,7 @@
         </div>
 
         <!-- Card 12: Fake News Sniper -->
-        <div class="project-card-wrapper">
+        <div class="project-card-wrapper" data-project="Fake-News-Sniper">
           <div class="project-card glass-card">
             <div class="project-glow"></div>
             <div class="project-card-content">
@@ -708,8 +1012,26 @@
                   </svg>
                 </div>
                 <div class="project-title-container" style="flex-grow: 1;">
-                  <span class="project-category">TEXT CLASSIFICATION / NLP</span>
-                  <h3 class="project-title">Fake News Sniper</h3>
+                  <span class="project-category">
+                    <span class="lang-en">TEXT CLASSIFICATION / NLP</span>
+                    <span class="lang-fr">TEXT CLASSIFICATION / NLP</span>
+                  </span>
+                  <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+                    <h3 class="project-title">Fake News Sniper</h3>
+                    <span class="project-type-badge personal">
+                      <span class="lang-en">Personal</span>
+                      <span class="lang-fr">Perso</span>
+                    </span>
+                    <span class="private-badge">
+                      <svg viewBox="0 0 24 24" width="9" height="9" stroke="currentColor" stroke-width="2.5" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        style="display: inline-block; vertical-align: middle;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                      Private
+                    </span>
+                  </div>
                 </div>
                 <a href="https://github.com/williamRX/Fake-News-Sniper" target="_blank" rel="noopener noreferrer"
                   class="project-header-link" aria-label="Fake News Sniper GitHub Repository">
@@ -722,7 +1044,14 @@
                 </a>
               </div>
               <p class="project-desc">
-                Application de classification sémantique entraînée pour identifier et isoler les fausses informations (Fake News). Le modèle évalue les structures textuelles et les marqueurs linguistiques suspects pour affecter un indice de fiabilité aux articles soumis.
+                <span class="project-summary-short">
+                  <span class="lang-en">NLP binary classifier evaluating linguistic and structural markers to detect fake news.</span>
+                  <span class="lang-fr">Classifieur NLP de Fake News analysant les structures sémantiques et linguistiques.</span>
+                </span>
+                <span class="project-summary-full">
+                  <span class="lang-en">Semantic classification application trained to detect and isolate fake news. Evaluates text structures and suspicious linguistic markers to assign a credibility score to submitted articles.</span>
+                  <span class="lang-fr">Application de classification sémantique entraînée pour identifier et isoler les fausses informations (Fake News). Le modèle évalue les structures textuelles et les marqueurs linguistiques suspects pour affecter un indice de fiabilité aux articles soumis.</span>
+                </span>
               </p>
               <div class="project-tags">
                 <span class="tag">NLP</span>
@@ -738,12 +1067,18 @@
     <!-- 4. TECH STACK SECTION -->
     <section id="stack" class="stack-section section-reveal">
       <div class="section-header">
-        <span class="section-tag">// Technical Arsenal</span>
-        <h2 class="section-title">Machine Learning &amp; Tech Stack</h2>
+        <span class="section-tag">
+          <span class="lang-en">// Technical Arsenal</span>
+          <span class="lang-fr">// Arsenal Technique</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">Machine Learning &amp; Tech Stack</span>
+          <span class="lang-fr">Stack Technique &amp; Machine Learning</span>
+        </h2>
       </div>
 
       <div class="stack-grid">
-        <!-- Card 1: Modeling & Deep Learning -->
+        <!-- Category 1: Deep Learning & Vision -->
         <div class="stack-card-wrapper">
           <div class="stack-card glass-card">
             <div class="stack-glow"></div>
@@ -751,23 +1086,120 @@
               <div class="stack-card-header">
                 <div class="stack-icon-wrapper">
                   <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-4.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2zM14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-4.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2z"></path>
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                   </svg>
                 </div>
-                <h3 class="stack-card-title">Deep Learning &amp; Modeling</h3>
+                <h3 class="stack-card-title">
+                  <span class="lang-en">Deep Learning &amp; Vision</span>
+                  <span class="lang-fr">Deep Learning &amp; Vision</span>
+                </h3>
               </div>
               <ul class="stack-items">
-                <li class="stack-item"><span class="stack-dot dl-dot"></span>PyTorch</li>
-                <li class="stack-item"><span class="stack-dot dl-dot"></span>Apple MLX</li>
-                <li class="stack-item"><span class="stack-dot dl-dot"></span>Hugging Face</li>
-                <li class="stack-item"><span class="stack-dot dl-dot"></span>Transformers</li>
-                <li class="stack-item"><span class="stack-dot dl-dot"></span>Tokenizers</li>
+                <li class="stack-item" data-projects="Astro-Retrieve,WePlate,MoodX">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot dl-dot"></span>
+                    <span class="stack-skill-name">PyTorch</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">Astro-Retrieve</span>
+                    <span class="stack-badge">WePlate</span>
+                    <span class="stack-badge">MoodX</span>
+                  </div>
+                </li>
+                <li class="stack-item" data-projects="MoodX,Zoidberg">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot dl-dot"></span>
+                    <span class="stack-skill-name">Deep Learning (CNN)</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">MoodX</span>
+                    <span class="stack-badge">Zoidberg 2.0</span>
+                  </div>
+                </li>
+                <li class="stack-item" data-projects="MoodX,Zoidberg">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot dl-dot"></span>
+                    <span class="stack-skill-name">Computer Vision (OpenCV)</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">MoodX</span>
+                    <span class="stack-badge">Zoidberg 2.0</span>
+                  </div>
+                </li>
+                <li class="stack-item" data-projects="Strategenetique">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot dl-dot"></span>
+                    <span class="stack-skill-name">Algorithmes Génétiques</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">Strategenetique</span>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <!-- Card 2: MLOps & Serving -->
+        <!-- Category 2: NLP & Large Language Models -->
+        <div class="stack-card-wrapper">
+          <div class="stack-card glass-card">
+            <div class="stack-glow"></div>
+            <div class="stack-card-content">
+              <div class="stack-card-header">
+                <div class="stack-icon-wrapper">
+                  <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21V3M3.284 14.253a9.006 9.006 0 0 1 0-4.506M20.716 14.253a9.006 9.006 0 0 0 0-4.506M12 3a9.004 9.004 0 0 1 8.716 6.747M12 3a9.004 9.004 0 0 0-8.716 6.747"></path>
+                  </svg>
+                </div>
+                <h3 class="stack-card-title">
+                  <span class="lang-en">NLP &amp; LLMs</span>
+                  <span class="lang-fr">NLP &amp; LLMs</span>
+                </h3>
+              </div>
+              <ul class="stack-items">
+                <li class="stack-item" data-projects="Voltaire">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot llm-dot"></span>
+                    <span class="stack-skill-name">Transformers &amp; MLX</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">Voltaire</span>
+                  </div>
+                </li>
+                <li class="stack-item" data-projects="Siquelator">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot llm-dot"></span>
+                    <span class="stack-skill-name">LangChain &amp; AI Agents</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">Siquelator</span>
+                  </div>
+                </li>
+                <li class="stack-item" data-projects="Voltaire,Travel-Order-Resolver">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot llm-dot"></span>
+                    <span class="stack-skill-name">Tokenisation &amp; NER</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">Voltaire</span>
+                    <span class="stack-badge">Travel Order Resolver</span>
+                  </div>
+                </li>
+                <li class="stack-item" data-projects="Siquelator">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot llm-dot"></span>
+                    <span class="stack-skill-name">Text-to-SQL</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">Siquelator</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: MLOps & API Deployment -->
         <div class="stack-card-wrapper">
           <div class="stack-card glass-card">
             <div class="stack-glow"></div>
@@ -779,23 +1211,58 @@
                     <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
                     <line x1="6" y1="6" x2="6.01" y2="6"></line>
                     <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                    <line x1="18" y1="6" x2="18.01" y2="6"></line>
-                    <line x1="18" y1="18" x2="18.01" y2="18"></line>
                   </svg>
                 </div>
-                <h3 class="stack-card-title">MLOps &amp; Serving</h3>
+                <h3 class="stack-card-title">
+                  <span class="lang-en">MLOps &amp; API Deployment</span>
+                  <span class="lang-fr">MLOps &amp; Déploiement</span>
+                </h3>
               </div>
               <ul class="stack-items">
-                <li class="stack-item"><span class="stack-dot mlops-dot"></span>FastAPI</li>
-                <li class="stack-item"><span class="stack-dot mlops-dot"></span>Ollama</li>
-                <li class="stack-item"><span class="stack-dot mlops-dot"></span>Triton Inference</li>
-                <li class="stack-item"><span class="stack-dot mlops-dot"></span>Docker</li>
+                <li class="stack-item" data-projects="Astro-Retrieve,RecFlix">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot mlops-dot"></span>
+                    <span class="stack-skill-name">FastAPI</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">Astro-Retrieve</span>
+                    <span class="stack-badge">RecFlix</span>
+                  </div>
+                </li>
+                <li class="stack-item" data-projects="Astro-Retrieve,Siquelator">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot mlops-dot"></span>
+                    <span class="stack-skill-name">Ollama &amp; Local LLMs</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">Astro-Retrieve</span>
+                    <span class="stack-badge">Siquelator</span>
+                  </div>
+                </li>
+                <li class="stack-item" data-projects="Astro-Retrieve">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot mlops-dot"></span>
+                    <span class="stack-skill-name">Pipelines MLOps</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">Astro-Retrieve</span>
+                  </div>
+                </li>
+                <li class="stack-item" data-projects="MoodX">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot mlops-dot"></span>
+                    <span class="stack-skill-name">Real-time Inference</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">MoodX</span>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <!-- Card 3: Vector DBs & Storage -->
+        <!-- Category 4: Algorithmes & Analyse de Données -->
         <div class="stack-card-wrapper">
           <div class="stack-card glass-card">
             <div class="stack-glow"></div>
@@ -803,41 +1270,62 @@
               <div class="stack-card-header">
                 <div class="stack-icon-wrapper">
                   <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                    <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
                   </svg>
                 </div>
-                <h3 class="stack-card-title">Vector DBs &amp; Storage</h3>
+                <h3 class="stack-card-title">
+                  <span class="lang-en">Algorithms &amp; Analysis</span>
+                  <span class="lang-fr">Algorithmes &amp; Analyse</span>
+                </h3>
               </div>
               <ul class="stack-items">
-                <li class="stack-item"><span class="stack-dot db-dot"></span>Qdrant</li>
-                <li class="stack-item"><span class="stack-dot db-dot"></span>ChromaDB</li>
-                <li class="stack-item"><span class="stack-dot db-dot"></span>pgvector (Postgres)</li>
-                <li class="stack-item"><span class="stack-dot db-dot"></span>SQL (Oracle/MySQL)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4: Cloud & Infrastructure -->
-        <div class="stack-card-wrapper">
-          <div class="stack-card glass-card">
-            <div class="stack-glow"></div>
-            <div class="stack-card-content">
-              <div class="stack-card-header">
-                <div class="stack-icon-wrapper">
-                  <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-                  </svg>
-                </div>
-                <h3 class="stack-card-title">Cloud &amp; Infra</h3>
-              </div>
-              <ul class="stack-items">
-                <li class="stack-item"><span class="stack-dot cloud-dot"></span>AWS SageMaker</li>
-                <li class="stack-item"><span class="stack-dot cloud-dot"></span>AWS S3 / EC2</li>
-                <li class="stack-item"><span class="stack-dot cloud-dot"></span>GitHub Actions</li>
-                <li class="stack-item"><span class="stack-dot cloud-dot"></span>Linux / Bash</li>
+                <li class="stack-item" data-projects="Tune-Botrapoint">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot algo-dot"></span>
+                    <span class="stack-skill-name">Scikit-Learn</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">Tune-Botrapoint</span>
+                  </div>
+                </li>
+                <li class="stack-item" data-projects="Strategenetique">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot algo-dot"></span>
+                    <span class="stack-skill-name">NumPy &amp; Vectorization</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">Strategenetique</span>
+                  </div>
+                </li>
+                <li class="stack-item" data-projects="Astro-Retrieve">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot algo-dot"></span>
+                    <span class="stack-skill-name">Vector Databases</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">Astro-Retrieve</span>
+                  </div>
+                </li>
+                <li class="stack-item" data-projects="Travel-Order-Resolver">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot algo-dot"></span>
+                    <span class="stack-skill-name">Graph Algorithms</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">Travel Order Resolver</span>
+                  </div>
+                </li>
+                <li class="stack-item" data-projects="WePlate">
+                  <div class="stack-skill-info">
+                    <span class="stack-dot algo-dot"></span>
+                    <span class="stack-skill-name">Operations Research (OR)</span>
+                  </div>
+                  <div class="stack-linked-badges">
+                    <span class="stack-badge">WePlate</span>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -848,14 +1336,23 @@
     <!-- 5. EDUCATION & CERTIFICATIONS -->
     <section id="education" class="education-section section-reveal">
       <div class="section-header">
-        <span class="section-tag">// Qualifications</span>
-        <h2 class="section-title">Education &amp; Credentials</h2>
+        <span class="section-tag">
+          <span class="lang-en">// Qualifications</span>
+          <span class="lang-fr">// Diplômes &amp; Certifications</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">Education &amp; Credentials</span>
+          <span class="lang-fr">Formation &amp; Titres</span>
+        </h2>
       </div>
 
       <div class="education-grid">
         <!-- Academic Path -->
         <div class="education-block">
-          <h3 class="block-title">Academic Path</h3>
+          <h3 class="block-title">
+            <span class="lang-en">Academic Path</span>
+            <span class="lang-fr">Parcours Académique</span>
+          </h3>
 
           <div class="credential-item">
             <div class="cred-left">
@@ -864,8 +1361,14 @@
             </div>
             <div class="cred-right">
               <div class="cred-header">
-                <h4 class="cred-title">MSc Pro in Artificial Intelligence</h4>
-                <span class="cred-date">Graduating Sept 2026</span>
+                <h4 class="cred-title">
+                  <span class="lang-en">MSc Pro in Artificial Intelligence</span>
+                  <span class="lang-fr">MSc Pro en Intelligence Artificielle</span>
+                </h4>
+                <span class="cred-date">
+                  <span class="lang-en">Graduating Sept 2026</span>
+                  <span class="lang-fr">Diplôme prévu en Sept 2026</span>
+                </span>
               </div>
               <p class="cred-institution">Epitech</p>
             </div>
@@ -878,10 +1381,16 @@
             </div>
             <div class="cred-right">
               <div class="cred-header">
-                <h4 class="cred-title">Engineering Core Curriculum</h4>
+                <h4 class="cred-title">
+                  <span class="lang-en">Engineering Core Curriculum</span>
+                  <span class="lang-fr">Tronc Commun Ingénieur</span>
+                </h4>
                 <span class="cred-date">2021 — 2022</span>
               </div>
-              <p class="cred-institution">INSA Lyon (Electronics &amp; Introduction to ML)</p>
+              <p class="cred-institution">
+                <span class="lang-en">INSA Lyon (Electronics &amp; Introduction to ML)</span>
+                <span class="lang-fr">INSA Lyon (Électronique &amp; Introduction au ML)</span>
+              </p>
             </div>
           </div>
 
@@ -892,7 +1401,10 @@
             <div class="cred-right">
               <div class="cred-header">
                 <h4 class="cred-title">CPGE (Math &amp; Physics)</h4>
-                <span class="cred-date">3-year intensive program</span>
+                <span class="cred-date">
+                  <span class="lang-en">3-year intensive program</span>
+                  <span class="lang-fr">Classe prépa intensive de 3 ans</span>
+                </span>
               </div>
               <p class="cred-institution">Lycée Jean Perrin</p>
             </div>
@@ -917,14 +1429,18 @@
               <span class="cert-issuer">Amazon Web Services (AWS)</span>
               <h4 class="cert-name">AWS Certified Machine Learning – Associate</h4>
               <div class="cert-meta" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <span class="cert-tag">Credential Verified</span>
+                <span class="cert-tag">
+                  <span class="lang-en">Credential Verified</span>
+                  <span class="lang-fr">Certification Vérifiée</span>
+                </span>
                 <span class="cert-tag" style="background: rgba(99, 102, 241, 0.05); border-color: rgba(99, 102, 241, 0.15); color: var(--accent-indigo); display: inline-flex; align-items: center; gap: 0.25rem;">
                   <svg viewBox="0 0 24 24" width="10" height="10" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block;">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                     <polyline points="7 10 12 15 17 10"></polyline>
                     <line x1="12" y1="15" x2="12" y2="3"></line>
                   </svg>
-                  Download PDF
+                  <span class="lang-en">Download PDF</span>
+                  <span class="lang-fr">Télécharger le PDF</span>
                 </span>
               </div>
             </div>
@@ -932,18 +1448,29 @@
         </div>
       </div>
     </section>
+    
     <!-- 5. CONTACT SECTION -->
     <section id="contact" class="contact-section section-reveal">
       <div class="section-header">
-        <span class="section-tag">// Get In Touch</span>
-        <h2 class="section-title">Contact Me</h2>
+        <span class="section-tag">
+          <span class="lang-en">// Get In Touch</span>
+          <span class="lang-fr">// Me Contacter</span>
+        </span>
+        <h2 class="section-title">
+          <span class="lang-en">Contact Me</span>
+          <span class="lang-fr">Contactez-moi</span>
+        </h2>
       </div>
 
       <div class="contact-grid">
         <div class="contact-info">
-          <h3 class="contact-subtitle">Let's build something together</h3>
+          <h3 class="contact-subtitle">
+            <span class="lang-en">Let's build something together</span>
+            <span class="lang-fr">Construisons quelque chose ensemble</span>
+          </h3>
           <p class="contact-desc">
-            I am open to machine learning and software engineering opportunities. Whether you have a project idea, want to discuss LLM architectures, or just say hello, feel free to reach out!
+            <span class="lang-en">I am open to machine learning and software engineering opportunities. Whether you have a project idea, want to discuss LLM architectures, or just say hello, feel free to reach out!</span>
+            <span class="lang-fr">Je suis ouvert aux opportunités en machine learning et génie logiciel. Que vous ayez une idée de projet, souhaitiez discuter d'architectures de LLM ou simplement me saluer, n'hésitez pas à me contacter !</span>
           </p>
           <div class="contact-methods">
             <div class="contact-method">
@@ -966,8 +1493,11 @@
                 </svg>
               </div>
               <div class="method-details">
-                <span class="method-label">Location</span>
-                <span class="method-value">Montpellier / Toulon / Remote</span>
+                <span class="method-label">
+                  <span class="lang-en">Location</span>
+                  <span class="lang-fr">Localisation</span>
+                </span>
+                <span class="method-value">Montpellier / Toulon / Marseille / Nice / Remote</span>
               </div>
             </div>
           </div>
@@ -981,7 +1511,10 @@
             <input type="checkbox" name="botcheck" class="hidden-field" style="display: none;">
 
             <div class="form-group">
-              <label for="name" class="form-label">Name</label>
+              <label for="name" class="form-label">
+                <span class="lang-en">Name</span>
+                <span class="lang-fr">Nom</span>
+              </label>
               <input type="text" id="name" name="name" required placeholder="John Doe" class="form-input" />
             </div>
 
@@ -992,11 +1525,15 @@
 
             <div class="form-group">
               <label for="message" class="form-label">Message</label>
-              <textarea id="message" name="message" required rows="5" placeholder="Let's talk about machine learning..." class="form-input form-textarea"></textarea>
+              <textarea id="message" name="message" required rows="5" class="form-input form-textarea"
+                placeholder="Let's talk about machine learning..."></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary btn-submit">
-              <span>Send Message</span>
+              <span>
+                <span class="lang-en">Send Message</span>
+                <span class="lang-fr">Envoyer le message</span>
+              </span>
               <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="22" y1="2" x2="11" y2="13"></line>
                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
@@ -1014,12 +1551,19 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-left">
-        <p class="copyright">&copy; <span id="current-year"></span> William Roux. All rights reserved.</p>
+        <p class="copyright">
+          &copy; <span id="current-year"></span> William Roux. 
+          <span class="lang-en">All rights reserved.</span>
+          <span class="lang-fr">Tous droits réservés.</span>
+        </p>
       </div>
       <div class="footer-center">
         <div class="availability-status">
           <span class="status-pulse"></span>
-          <span class="availability-text">Available for opportunities in Montpellier / Toulon / Remote</span>
+          <span class="availability-text">
+            <span class="lang-en">Available for opportunities in Montpellier / Toulon / Marseille / Nice / Remote</span>
+            <span class="lang-fr">Disponible pour des opportunités à Montpellier / Toulon / Marseille / Nice / Remote</span>
+          </span>
         </div>
       </div>
       <div class="footer-right">
@@ -1046,6 +1590,22 @@
       </div>
     </div>
   </footer>
+
+  <!-- Project Details Modal -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-container glass-card">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="modal-content" id="modal-project-content">
+        <!-- Dynamically populated from JS -->
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="/src/main.js"></script>
 </body>

@@ -209,6 +209,57 @@ a {
   width: 100%;
 }
 
+/* Language Switcher Styling */
+.lang-switch-btn {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: var(--transition-smooth);
+}
+
+.lang-switch-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+}
+
+.lang-opt {
+  transition: color var(--transition-smooth);
+}
+
+body.lang-en .lang-opt-en {
+  color: var(--accent-indigo);
+  text-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+}
+
+body.lang-fr .lang-opt-fr {
+  color: var(--accent-indigo);
+  text-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+}
+
+.lang-divider {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 0.7rem;
+}
+
+/* Language Toggle Logic */
+body.lang-fr .lang-en {
+  display: none !important;
+}
+
+body.lang-en .lang-fr {
+  display: none !important;
+}
+
 /* Availability Badge in Nav */
 .nav-status {
   display: flex;
@@ -629,6 +680,39 @@ section {
   font-weight: 500;
 }
 
+.subproject-duration {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-left: auto;
+  transition: var(--transition-smooth);
+}
+
+.experience-card:hover .subproject-duration {
+  border-color: rgba(99, 102, 241, 0.2);
+  color: var(--text-primary);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.subproject-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+  padding-left: 1.65rem;
+}
+
+.experience-card:hover .tag {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+
 /* --- 3. PROJECTS SECTION --- */
 .projects-grid {
   display: grid;
@@ -643,6 +727,7 @@ section {
   padding: 1px;
   background: transparent;
   transition: var(--transition-smooth);
+  cursor: pointer;
 }
 
 .project-card-wrapper:hover {
@@ -726,9 +811,9 @@ section {
 
 .project-title-container {
   display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
 }
 
 .project-title {
@@ -736,6 +821,31 @@ section {
   font-weight: 600;
   color: var(--text-primary);
   letter-spacing: -0.25px;
+}
+
+.project-type-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.project-type-badge.epitech {
+  border-color: rgba(99, 102, 241, 0.25);
+  background: rgba(99, 102, 241, 0.05);
+  color: var(--accent-indigo);
+}
+
+.project-type-badge.personal {
+  border-color: rgba(16, 185, 129, 0.25);
+  background: rgba(16, 185, 129, 0.05);
+  color: var(--accent-emerald);
 }
 
 .private-badge {
@@ -775,6 +885,8 @@ section {
   margin-bottom: 2rem;
   flex-grow: 1;
 }
+
+
 
 .project-tags {
   display: flex;
@@ -1257,8 +1369,14 @@ section {
 /* --- 4. TECH STACK SECTION --- */
 .stack-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .stack-card-wrapper {
@@ -1353,16 +1471,51 @@ section {
 
 .stack-item {
   font-family: var(--font-mono);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.85rem;
   transition: var(--transition-smooth);
+  padding: 0.35rem 0;
+  width: 100%;
 }
 
-.stack-card-wrapper:hover .stack-item {
+.stack-skill-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.stack-linked-badges {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.stack-badge {
+  font-size: 0.62rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  transition: var(--transition-smooth);
+}
+
+.stack-item:hover {
   color: var(--text-primary);
+  transform: translateX(4px);
+}
+
+.stack-item:hover .stack-badge {
+  background: rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.2);
+  color: var(--text-primary);
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.15);
 }
 
 .stack-dot {
@@ -1377,9 +1530,19 @@ section {
   box-shadow: 0 0 6px var(--accent-violet);
 }
 
+.llm-dot {
+  background-color: var(--accent-indigo);
+  box-shadow: 0 0 6px var(--accent-indigo);
+}
+
 .mlops-dot {
   background-color: var(--accent-amber);
   box-shadow: 0 0 6px var(--accent-amber);
+}
+
+.algo-dot {
+  background-color: var(--accent-emerald);
+  box-shadow: 0 0 6px var(--accent-emerald);
 }
 
 .db-dot {
@@ -1390,4 +1553,176 @@ section {
 .cloud-dot {
   background-color: #3b82f6;
   box-shadow: 0 0 6px #3b82f6;
+}
+
+/* Project Cards Hover Scale Effect */
+.project-card-wrapper {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+}
+
+.project-card-wrapper:hover {
+  transform: translateY(-4px);
+  z-index: 10;
+}
+
+/* --- Project Modal Style --- */
+
+/* Prevent page scrolling when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 4, 6, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.modal-container {
+  position: relative;
+  width: 90%;
+  max-width: 650px;
+  max-height: 85vh;
+  background: rgba(9, 9, 11, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px;
+  overflow-y: auto;
+  z-index: 10000;
+  transform: scale(0.95) translateY(10px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(99, 102, 241, 0.1);
+}
+
+.modal-overlay.active .modal-container {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10010;
+  transition: var(--transition-smooth);
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.modal-content {
+  padding: 2.5rem;
+}
+
+/* Modal Content Layout modifications */
+.modal-content .project-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 1.5rem;
+  padding-right: 3.5rem; /* Make space for the close button */
+}
+
+.modal-content .project-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  display: block;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.modal-content .project-tags {
+  margin-bottom: 1.5rem;
+}
+
+.modal-content .project-header-link {
+  color: var(--accent-indigo);
+}
+
+.modal-content .project-header-link:hover {
+  color: var(--text-primary);
+}
+
+/* Add details hover indicator on cards */
+.project-card-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  box-shadow: inset 0 0 15px rgba(99, 102, 241, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 4;
+}
+
+.project-card-wrapper:hover::after {
+  opacity: 1;
+}
+
+/* Add a tiny text instruction at the bottom of the card: "Click to learn more / Cliquer pour voir les détails" */
+.project-learn-more {
+  margin-top: 1.25rem;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--accent-indigo);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-card-wrapper:hover .project-learn-more {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* Visibility toggles for project card vs modal view summaries */
+.project-card .project-summary-full {
+  display: none !important;
+}
+
+.project-card .project-summary-short {
+  display: block !important;
+}
+
+.modal-content .project-summary-short {
+  display: none !important;
+}
+
+.modal-content .project-summary-full {
+  display: block !important;
 }
