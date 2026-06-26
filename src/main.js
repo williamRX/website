@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
       message: "Let's talk about machine learning..."
     },
     fr: {
-      name: "Votre nom",
-      email: "votre.email@exemple.com",
+      name: "John Doe",
+      email: "john@example.com",
       message: "Discutons de machine learning..."
     }
   };
@@ -24,12 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
     en: {
       sending: 'Sending message...',
       success: 'Message sent successfully! I will get back to you shortly.',
+      invalidName: 'Please enter both your first and last name (e.g. John Doe).',
+      invalidEmail: 'Please enter a valid email address (temporary domains are not allowed).',
       error: 'Something went wrong. Please try again.',
       networkError: 'Network error. Please try again later.'
     },
     fr: {
       sending: 'Envoi du message en cours...',
       success: 'Message envoyé avec succès ! Je vous répondrai rapidement.',
+      invalidName: 'Veuillez saisir votre prénom et votre nom (ex: John Doe).',
+      invalidEmail: 'Veuillez saisir une adresse email valide (les emails temporaires ne sont pas acceptés).',
       error: 'Une erreur est survenue. Veuillez réessayer.',
       networkError: 'Erreur réseau. Veuillez réessayer plus tard.'
     }
@@ -166,9 +170,84 @@ document.addEventListener('DOMContentLoaded', () => {
   const formStatus = document.getElementById('form-status');
   
   if (contactForm && formStatus) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       
+      if (nameInput) {
+        const nameValue = nameInput.value.trim();
+        const nameParts = nameValue.split(/\s+/).filter(part => part.length >= 2);
+        if (nameParts.length < 2) {
+          formStatus.className = 'form-status-msg active error';
+          formStatus.textContent = statusTranslations[currentLang].invalidName;
+          nameInput.focus();
+          return;
+        }
+      }
+
+      // Disable submit button to prevent click spamming
+      const submitBtn = contactForm.querySelector('.btn-submit');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.6';
+        submitBtn.style.cursor = 'not-allowed';
+      }
+
+      if (emailInput) {
+        const emailValue = emailInput.value.trim().toLowerCase();
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const blockedDomains = [
+          'yopmail.com', 'yopmail.fr', 'yopmail.net', 'cool.fr.nf', 'jetable.fr.nf', 
+          'courriel.fr.nf', 'moncourrier.fr.nf', 'monemail.fr.nf', 'monmail.fr.nf', 
+          'nomail.xl.cx', 'mega.zippy.co.uk', 'speed.1s.fr', 'angry.im', 
+          'mailinator.com', 'tempmail.com', 'guerrillamail.com', 'sharklasers.com', 
+          '10minutemail.com', 'trashmail.com', 'dispostable.com', 'getairmail.com', 
+          'throwawaymail.com', 'temp-mail.org', 'temp-mail.ru', 'tempmail.net'
+        ];
+        
+        const parts = emailValue.split('@');
+        if (parts.length !== 2 || !emailRegex.test(emailValue) || blockedDomains.includes(parts[1])) {
+          formStatus.className = 'form-status-msg active error';
+          formStatus.textContent = statusTranslations[currentLang].invalidEmail;
+          emailInput.focus();
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '';
+            submitBtn.style.cursor = '';
+          }
+          return;
+        }
+
+        const domain = parts[1];
+
+        // Show verifying status
+        formStatus.className = 'form-status-msg active';
+        formStatus.textContent = currentLang === 'fr' ? 'Vérification de l\'adresse email...' : 'Verifying email address...';
+
+        // Perform DNS check for MX records
+        try {
+          const dnsResponse = await fetch(`https://cloudflare-dns.com/dns-query?name=${domain}&type=MX`, {
+            headers: {
+              'Accept': 'application/dns-json'
+            }
+          });
+          const dnsJson = await dnsResponse.json();
+          
+          if (dnsJson.Status === 3 || !dnsJson.Answer || dnsJson.Answer.length === 0) {
+            formStatus.className = 'form-status-msg active error';
+            formStatus.textContent = statusTranslations[currentLang].invalidEmail;
+            emailInput.focus();
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.style.opacity = '';
+              submitBtn.style.cursor = '';
+            }
+            return;
+          }
+        } catch (dnsErr) {
+          console.warn("DNS check failed, passing validation to prevent blocking legitimate requests:", dnsErr);
+        }
+      }
+
       // Reset classes
       formStatus.className = 'form-status-msg active';
       formStatus.textContent = statusTranslations[currentLang].sending;
@@ -186,9 +265,17 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(async (response) => {
         const json = await response.json();
         if (response.status === 200) {
-          formStatus.className = 'form-status-msg active success';
-          formStatus.textContent = statusTranslations[currentLang].success;
+          formStatus.className = 'form-status-msg';
+          formStatus.textContent = '';
           contactForm.reset();
+          
+          // Show Success Modal
+          const successModal = document.getElementById('success-modal');
+          if (successModal) {
+            document.body.classList.add('modal-open');
+            successModal.classList.add('active');
+            successModal.setAttribute('aria-hidden', 'false');
+          }
         } else {
           console.error(json);
           formStatus.className = 'form-status-msg active error';
@@ -201,9 +288,18 @@ document.addEventListener('DOMContentLoaded', () => {
         formStatus.textContent = statusTranslations[currentLang].networkError;
       })
       .finally(() => {
+        // Re-enable submit button
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '';
+          submitBtn.style.cursor = '';
+        }
+        
         setTimeout(() => {
-          formStatus.className = 'form-status-msg';
-          formStatus.textContent = '';
+          if (!formStatus.classList.contains('error')) {
+            formStatus.className = 'form-status-msg';
+            formStatus.textContent = '';
+          }
         }, 5000);
       });
     });
@@ -297,9 +393,37 @@ document.addEventListener('DOMContentLoaded', () => {
     modalBackdrop.addEventListener('click', closeProjectModal);
   }
 
+  // Success Modal close handlers
+  const successModal = document.getElementById('success-modal');
+  const successCloseBtn = document.getElementById('success-modal-close-btn');
+  const successBackdrop = document.getElementById('success-modal-backdrop');
+  const successBtn = document.getElementById('success-modal-btn');
+
+  function closeSuccessModal() {
+    if (!successModal) return;
+    document.body.classList.remove('modal-open');
+    successModal.classList.remove('active');
+    successModal.setAttribute('aria-hidden', 'true');
+  }
+
+  if (successCloseBtn) {
+    successCloseBtn.addEventListener('click', closeSuccessModal);
+  }
+  if (successBackdrop) {
+    successBackdrop.addEventListener('click', closeSuccessModal);
+  }
+  if (successBtn) {
+    successBtn.addEventListener('click', closeSuccessModal);
+  }
+
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && projectModal && projectModal.classList.contains('active')) {
-      closeProjectModal();
+    if (e.key === 'Escape') {
+      if (projectModal && projectModal.classList.contains('active')) {
+        closeProjectModal();
+      }
+      if (successModal && successModal.classList.contains('active')) {
+        closeSuccessModal();
+      }
     }
   });
 
